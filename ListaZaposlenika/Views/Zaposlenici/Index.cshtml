@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ListaZaposlenika.Models.Zaposlenik>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div id="PlaceHolderHere"></div>
+<button type="button" class="btn btn-primary" data-toggle="ajax-modal" data-target="#dodajZaposlenik"
+        data-url="@Url.Action("Create")">
+    Create
+</button>
+
+<table class="table">
+    <thead>
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prezime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Oib)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumRođenja)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prezime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Oib)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DatumRođenja)
+                </td>
+
+                <td>
+                    <button type="button" class="btn btn-primary" data-toggle="ajax-modal" data-target="#dodajZaposlenik"
+                        data-url="@Url.Action($"Details/{item.Id}")">
+                        Otvori Pop Up
+                    </button>
+                    
+
+                   
+
+
+                </td>
+
+
+
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,62 @@
+﻿@model Zaposlenik
+
+<div class="modal fade" id="dodajZaposlenik">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h4 class="modal-title" id="dodajZaposlenikLabel">Detalji Zaposlenika</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                
+            </div>
+
+
+            <div class="modal-body">
+                <form>
+                    <dl class="btn-group-vertical">
+
+                        
+                        <div class="form-group">
+                            <dt>@Html.DisplayNameFor(model => model.Ime)</dt>                                                   
+                            <label asp-for="Ime">@Model.Ime</label>
+
+                        </div>
+
+                        <div class="form-group">
+                            <dt>@Html.DisplayNameFor(model => model.Prezime)</dt>
+                            <label asp-for="Prezime">@Model.Prezime</label>
+
+                        </div>
+
+                        <div class="form-group">
+                            <dt>@Html.DisplayNameFor(model => model.Oib)</dt>
+                            <label asp-for="Oib">@Model.Oib</label>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <dt>@Html.DisplayNameFor(model => model.DatumRođenja)</dt>
+                            <label asp-for="DatumRođenja">@Model.DatumRođenja</label>
+
+                        </div>
+
+                    </dl>
+                    
+
+                </form>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+
+        </div>
+
+    </div>
+
+</div>

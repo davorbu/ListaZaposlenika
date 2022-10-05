@@ -1,0 +1,60 @@
+﻿@model Zaposlenik
+
+<div class="modal fade" id="dodajZaposlenik">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h4 class="modal-title" id="dodajZaposlenikLabel">Dodaj Zaposlenika</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>x</span>
+                </button>
+            </div>
+
+
+            <div class="modal-body">
+                <form action="Create">
+
+                    <div class="form-group">
+                        <label asp-for="Ime"></label>
+                        <input asp-for="Ime" class="form-control" />
+                        <span asp-validation-for="Ime" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Prezime"></label>
+                        <input asp-for="Prezime" class="form-control" />
+                        <span asp-validation-for="Prezime" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Oib"></label>
+                        <input asp-for="Oib" class="form-control" />
+                        <span asp-validation-for="Oib" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label asp-for="DatumRođenja"></label>
+                        <input asp-for="DatumRođenja" class="form-control" />
+                        <span asp-validation-for="DatumRođenja" class="text-danger"></span>
+                    </div>
+
+                </form>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-save="modal">Save</button>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
