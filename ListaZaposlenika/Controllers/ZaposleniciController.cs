@@ -12,7 +12,7 @@ namespace ListaZaposlenika.Controllers
         public ZaposleniciController(ApplicationDbContext context)
         {
             _context = context;
-        }   
+        }
 
         public IActionResult Index()
         {
@@ -41,8 +41,8 @@ namespace ListaZaposlenika.Controllers
 
         public IActionResult Details(int id)
         {
-            
-           var zaposlenici = _context.Zapposlenici.Where(x => x.Id == id).FirstOrDefault();
+
+            var zaposlenici = _context.Zapposlenici.Where(x => x.Id == id).FirstOrDefault();
             return PartialView("_DetailsZaposlenikModelPartial", zaposlenici);
         }
     }
